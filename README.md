@@ -1,23 +1,38 @@
-```bash
-curl http://localhost:8080/
+   
+# Overview
+
+To retrieve the Product List which has the valid price reductions in a category using multiple usecases
+### Requirements:
+
+* Kotlin Runtime 1.2.61 or higher
+* Oracle Java Runtime 1.8 or higher
+* Maven 3.5.0
+* Eclipse / IntelliJ
+
+### To Build the application
+You don’t need to build from source to use Spring Boot (binaries in repo.spring.io), but if you want to try out the latest and greatest, Spring Boot can be easily built with the maven wrapper. You also need JDK 1.8.
+
+```
+./mvnw clean install
 ```
 
-```bash
-curl -H "Content-Type: application/json" -X POST -d '{
-    "firstName": "Bruno",
-    "lastName": "Krebs"
-}'  http://localhost:8080/
+### To Run the application
+Run the below command to start the application once "Build Successful" message is displayed
+
+```
+mvn spring-boot:run
 ```
 
+## Execution URLs:
 
-```bash
-curl -X DELETE http://localhost:8080/1
-```
+    Generic URL: http://localhost:8080/priceReductionList?labelType={labelType}
 
-```bash
-curl -H "Content-Type: application/json" -X PUT -d '{
-    "id": 6,
-    "firstName": "Bruno",
-    "lastName": "Simões Krebs"
-}'  http://localhost:8080/6
-```
+
+    Specific:
+
+      - http://localhost:8080/priceReductionList?labelType=ShowWasNow
+
+      - http://localhost:8080/priceReductionList?labelType=ShowWasThenNow
+
+      - http://localhost:8080/priceReductionList?labelType=ShowPercDscount
+

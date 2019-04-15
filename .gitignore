@@ -1,5 +1,11 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
+
+**/target/
+logs/
+.idea
+*.iml
+/bin/
+*.ipr
+*.iws
 
 ### STS ###
 .apt_generated
